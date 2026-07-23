@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教培机构 AI 助手 · 家长咨询自动回复 · AI 赚钱工具包</title>
+<meta name="description" content="教培机构专属 AI 工具包：家长咨询自动回复、续费提醒、朋友圈招生，0基础可搭建。">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',PingFangSC,sans-serif;color:#1a1a1a;background:#fff}
+.hero{background:linear-gradient(135deg,#1d4ed8,#60a5fa);color:#fff;padding:60px 20px;text-align:center}
+.hero h1{font-size:2.4rem;font-weight:800;margin-bottom:16px;line-height:1.3}
+.hero p{font-size:1.15rem;opacity:0.92;max-width:600px;margin:0 auto 32px}
+.cta-btn{display:inline-block;background:#bfdbfe;color:#1a1a1a;padding:14px 32px;border-radius:8px;font-size:1.1rem;font-weight:700;text-decoration:none;transition:transform .15s}
+.cta-btn:hover{transform:scale(1.04)}
+.demo-section{background:#eff6ff;padding:48px 20px;text-align:center}
+.demo-label{font-size:.85rem;color:#1d4ed8;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px}
+.demo-box{background:#fff;border-radius:16px;max-width:560px;margin:0 auto;box-shadow:0 4px 24px rgba(0,0,0,.08);overflow:hidden}
+.demo-header{display:flex;align-items:center;gap:10px;padding:14px 18px;background:#f5f5f5;border-bottom:1px solid #e5e5e5}
+.demo-dot{width:12px;height:12px;border-radius:50%}
+.demo-title{font-size:.85rem;color:#666;margin-left:auto;margin-right:auto}
+.chat-msg{padding:12px 18px;text-align:left;font-size:.9rem;line-height:1.6}
+.chat-user{background:#dbeafe;color:#1e40af;margin:8px 12px 4px;border-radius:12px 12px 12px 4px;padding:10px 14px}
+.chat-ai{background:#f5f5f5;color:#333;margin:4px 12px 8px;border-radius:12px 12px 4px 12px;padding:10px 14px}
+.features{padding:56px 20px;max-width:900px;margin:0 auto}
+.features h2{font-size:1.8rem;font-weight:800;text-align:center;margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.card{background:#fff;border:2px solid #f0f0f0;border-radius:16px;padding:28px;transition:box-shadow .2s}
+.card:hover{box-shadow:0 8px 32px rgba(0,0,0,.08)}
+.card-icon{font-size:2rem;margin-bottom:14px}
+.card h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
+.card p{font-size:.88rem;color:#666;line-height:1.6}
+.badge{display:inline-block;background:#eff6ff;color:#1d4ed8;padding:2px 10px;border-radius:20px;font-size:.75rem;font-weight:600;margin-bottom:10px}
+.comparison{padding:56px 20px;background:#fafafa}
+.comparison h2{font-size:1.8rem;font-weight:800;text-align:center;margin-bottom:40px}
+.compare-grid{max-width:700px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.compare-before{background:#fff;border:2px solid #93c5fd;border-radius:16px;padding:28px;text-align:center}
+.compare-after{background:#fff;border:2px solid #86efac;border-radius:16px;padding:28px;text-align:center}
+.compare-before h3{color:#2563eb;margin-bottom:20px;font-size:1.1rem}
+.compare-after h3{color:#16a34a;margin-bottom:20px;font-size:1.1rem}
+.compare-before ul,.compare-after ul{list-style:none;text-align:left;font-size:.88rem;line-height:2}
+.compare-before li::before{content:'✗ ';color:#2563eb;font-weight:700}
+.compare-after li::before{content:'✓ ';color:#16a34a;font-weight:700}
+.pricing{padding:56px 20px;text-align:center;background:linear-gradient(180deg,#fff,#eff6ff)}
+.pricing h2{font-size:1.8rem;font-weight:800;margin-bottom:8px}
+.pricing .sub{color:#888;margin-bottom:32px;font-size:.95rem}
+.price-box{display:inline-block;background:#fff;border:2px solid #60a5fa;border-radius:16px;padding:32px 48px;box-shadow:0 4px 24px rgba(96,165,250,.12)}
+.price-old{font-size:.9rem;color:#999;text-decoration:line-through}
+.price-new{font-size:3rem;font-weight:800;color:#2563eb}
+.price-new span{font-size:1rem;color:#666;font-weight:400}
+.price-note{font-size:.8rem;color:#888;margin-top:8px}
+.payment{padding:40px 20px;max-width:600px;margin:0 auto;text-align:center}
+.payment h3{font-size:1rem;font-weight:700;color:#888;margin-bottom:20px;letter-spacing:1px}
+.payment-grid{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.pay-btn{display:inline-block;padding:10px 20px;background:#f5f5f5;border-radius:8px;font-size:.88rem;color:#333;text-decoration:none;font-weight:500}
+.pay-btn:hover{background:#e5e5e5}
+footer{background:#1a1a1a;color:#888;text-align:center;padding:24px;font-size:.8rem}
+footer a{color:#aaa;text-decoration:none}
+.emoji-row{font-size:1.4rem;margin-bottom:12px}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="emoji-row">📚🎓</div>
+  <h1>"我是开培训机构的，<br>家长咨询太多回复不过来，AI 能帮忙吗？"</h1>
+  <p>家长随时问，你不可能 24 小时盯着手机。<br>AI 自动回答课程问题、预约试听、发续费提醒，0基础也能搭。</p>
+  <a href="https://lwy907919-a11y.github.io/ai-money-kit-cn/wizard.html" class="cta-btn">📚 立即体验 AI 向导 →</a>
+</section>
+
+<section class="demo-section">
+  <div class="demo-label">真实 AI 对话演示 · 教培场景</div>
+  <div class="demo-box">
+    <div class="demo-header">
+      <span class="demo-dot" style="background:#60a5fa"></span>
+      <span class="demo-dot" style="background:#fbbf24"></span>
+      <span class="demo-dot" style="background:#22c55e"></span>
+      <span class="demo-title">📚 教培 AI 向导</span>
+    </div>
+    <div class="chat-msg">
+      <div class="chat-user">我是做少儿英语培训的，暑假快到了，想让更多家长知道我们，但不知道怎么用 AI 做推广。</div>
+      <div class="chat-ai"><strong>暑假招生正好！给你设计一套「教培暑假招生智能体」：</strong><br><br>① <strong>家长咨询自动回复</strong> — "学费多少""上课时间""能试课吗"，AI 秒回，不漏一个潜在客户<br>② <strong>朋友圈招生文案</strong> — AI 每天生成一条家长爱看的朋友圈（孩子学习成果展示），发完还自动提醒<br>③ <strong>试听预约确认</strong> — 家长预约后自动发课程介绍+地点+注意事项，体验结束后自动跟进入学<br><br>这3个智能体，我这教程<strong>0基础也能搭出来</strong>。回复「1」，我帮你规划暑假前上线。</div>
+    </div>
+  </div>
+  <div style="margin-top:24px">
+    <a href="https://lwy907919-a11y.github.io/ai-money-kit-cn/wizard.html" class="cta-btn">📚 我也说一句话，让 AI 给我出方案 →</a>
+  </div>
+</section>
+
+<section class="features">
+  <h2>教培机构专属，AI 帮你做什么</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="badge">🔥 刚需功能</div>
+      <div class="card-icon">💬</div>
+      <h3>家长咨询自动回复</h3>
+      <p>"你们学费多少""有什么课程"，家长随时问 AI 随时答。秒回咨询，留联率提升 3 倍。</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📅</div>
+      <h3>试听预约管理</h3>
+      <p>AI 自动确认预约时间、发课程资料、提醒上课。体验结束后自动跟进转化家长。</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🔔</div>
+      <h3>续费到期提醒</h3>
+      <p>自动识别快到期学员，提前发续费优惠方案。续费率提升 15-30%，不靠老师记。</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📱</div>
+      <h3>朋友圈招生</h3>
+      <p>AI 生成孩子学习成果展示、家长好评截图、课程介绍，一键发朋友圈，持续招新生。</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📊</div>
+      <h3>学员数据分析</h3>
+      <p>各课程出勤率、转化率、续费率 AI 自动汇总，周报发微信，校区运营一目了然。</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🎯</div>
+      <h3>活动策划</h3>
+      <p>暑假/寒假/节假日 AI 给你出活动方案、家长邀请话术、物料文案全套，0成本做招生。</p>
+    </div>
+  </div>
+</section>
+
+<section class="comparison">
+  <h2>教培老板的真实改变</h2>
+  <div class="compare-grid">
+    <div class="compare-before">
+      <h3>❌ 以前没有 AI</h3>
+      <ul>
+        <li>家长问"学费多少"半天不回，人跑了</li>
+        <li>续费全靠老师记，经常漏掉</li>
+        <li>朋友圈不知道发什么</li>
+        <li>活动方案想破头</li>
+        <li>数据靠 Excel 算，容易出错</li>
+      </ul>
+    </div>
+    <div class="compare-after">
+      <h3>✅ 有了 AI 工具包</h3>
+      <ul>
+        <li>AI 秒回所有咨询，家长不流失</li>
+        <li>续费 AI 自动提醒，系统化跟进</li>
+        <li>朋友圈 AI 帮你写，一键发</li>
+        <li>AI 出节日活动方案，照着执行</li>
+        <li>数据 AI 自动汇总，周报秒出</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="pricing">
+  <h2>📚 已购买教培老板怎么说</h2>
+  <p class="sub">数字代表个人结果，不保证相同收益</p>
+  <div class="grid" style="max-width:800px;margin:0 auto">
+    <div class="card" style="text-align:left">
+      <p style="font-size:1rem;color:#333;margin-bottom:12px;font-style:italic">"暑假用 AI 工具包里的朋友圈招生功能，两个月招了30多个新生，比去年同期多了一倍。"</p>
+      <p style="font-size:.82rem;color:#888">— 刘校长，K12培训机构，南京 | 开业6年</p>
+    </div>
+    <div class="card" style="text-align:left">
+      <p style="font-size:1rem;color:#333;margin-bottom:12px;font-style:italic">"咨询回复速度从平均2小时变成秒回。家长说你们响应真快，感觉很专业，就报名了。"</p>
+      <p style="font-size:.82rem;color:#888">— 周老师，舞蹈工作室，武汉 | 开业3年</p>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" style="background:#eff6ff">
+  <h2>🚀 一次付费，终身使用</h2>
+  <p class="sub">教培 AI 工具包 · 0基础可上手</p>
+  <div class="price-box">
+    <div class="price-old">原价 ¥199</div>
+    <div class="price-new">¥29 <span>起</span></div>
+    <div class="price-note">含 5 大 AI 系统 + 终身更新 + 7-30天答疑</div>
+  </div>
+  <div style="margin-top:24px;font-size:.85rem;color:#666">
+    👆 体验 AI 向导免费，满意再付款
+  </div>
+</section>
+
+<section class="payment">
+  <h3>支 付 方 式</h3>
+  <div class="payment-grid">
+    <a href="https://lwy907919-a11y.github.io/ai-money-kit-cn/#payment" class="pay-btn">💚 微信/支付宝</a>
+    <a href="https://afdian.com/a/hzylw" class="pay-btn">⚡ 爱发电</a>
+    <a href="https://lwy907919-a11y.lemonsqueezy.com/" class="pay-btn">💳 信用卡/借记卡</a>
+    <a href="https://paypal.me/hzylw" class="pay-btn">🅿️ PayPal</a>
+  </div>
+  <div style="margin-top:20px;font-size:.78rem;color:#aaa">
+    所有支付方式均为一次性付款，无订阅，无自动续费
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 AI 赚钱工具包 · <a href="https://lwy907919-a11y.github.io/ai-money-kit-cn/">返回主站</a></p>
+</footer>
+
+</body>
+</html>
